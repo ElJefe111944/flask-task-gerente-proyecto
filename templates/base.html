@@ -24,9 +24,9 @@
 			{% if session.user %}
 				<li><a href="{{ url_for('profile', username=['user']) }}">Profile</a></li>
 				<li><a href="{{ url_for('add_task') }}">New Task</a></li>
-                {% if session.user | lower == "action" | lower %}
+           
 				<li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
-				{% endif %}
+				
                 <li><a href="{{ url_for('logout') }}">Log out</a></li>
 			{% else %}
 				<li><a href="{{ url_for('login') }}">Log in</a></li>
@@ -42,9 +42,9 @@
             {% if session.user %}
 				<li><a href="{{ url_for('profile', username=['user']) }}">Profile</a></li>
 				<li><a href="{{ url_for('add_task') }}">New Task</a></li>
-				{% if session.user | lower == "action" | lower %}
+				
 				<li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
-				{% endif %}
+				
 				<li><a href="{{ url_for('logout') }}">Log out</a></li>
 			    {% else %}
 				<li><a href="{{ url_for('login') }}">Log in</a></li>
